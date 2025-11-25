@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBKA_5ZgI1hLiYUcf3xJxaYLUQFZopLug0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1087540045572</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.rifath.calorifyMe</string>
+	<key>PROJECT_ID</key>
+	<string>food-vision-5c7cc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>food-vision-5c7cc.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1087540045572:ios:b6b9a05385756a405b1251</string>
+</dict>
+</plist>
