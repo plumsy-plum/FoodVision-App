@@ -1,4 +1,4 @@
-name: calorify_me
+name: FoodVision
 description: "Track Your Daily Calorie"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -19,7 +19,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.9.2
+  sdk: '>=3.3.0 <4.0.0'   # Dart version (compatible with Flutter 3.x)
+  flutter: '>=3.19.0'     # Add this line for Flutter SDK constraint
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -52,6 +53,10 @@ dependencies:
   firebase_app_check: ^0.4.1+2
   file_picker: ^10.3.7
   csv: ^6.0.0
+  pedometer: ^4.0.1
+  shared_preferences: ^2.2.3
+  permission_handler: ^11.3.1
+  confetti: ^0.7.0
 
 
 dev_dependencies:

@@ -1,13 +1,14 @@
-import 'package:calorify_me/screens/SplashScreen.dart';
-import 'package:calorify_me/screens/startingScreens/LoginScreen.dart';
-import 'package:calorify_me/screens/startingScreens/MainScreen.dart';
-import 'package:calorify_me/screens/startingScreens/OnboardingScreen.dart';
-import 'package:calorify_me/screens/startingScreens/SignUpScreen.dart';
-import 'package:calorify_me/sevices/AuthService.dart';
-import 'package:calorify_me/sevices/FoodProvider.dart';
-import 'package:calorify_me/sevices/ThameProvider.dart';
-import 'package:calorify_me/sevices/UserProvider.dart';
-import 'package:calorify_me/sevices/WaterProvider.dart';
+import 'package:FoodVision/screens/SplashScreen.dart';
+import 'package:FoodVision/screens/startingScreens/LoginScreen.dart';
+import 'package:FoodVision/screens/startingScreens/MainScreen.dart';
+import 'package:FoodVision/screens/startingScreens/OnboardingScreen.dart';
+import 'package:FoodVision/screens/startingScreens/SignUpScreen.dart';
+import 'package:FoodVision/sevices/AuthService.dart';
+import 'package:FoodVision/sevices/FoodProvider.dart';
+import 'package:FoodVision/sevices/StepTrackerProvider.dart';
+import 'package:FoodVision/sevices/ThameProvider.dart';
+import 'package:FoodVision/sevices/UserProvider.dart';
+import 'package:FoodVision/sevices/WaterProvider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -107,7 +108,14 @@ class CalorieTrackerApp extends StatelessWidget {
             ),
         ),
         ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider()), // ThemeProvider
-
+        ChangeNotifierProxyProvider<UserProvider, StepTrackerProvider>(
+          create: (_) => StepTrackerProvider(),
+          update: (_, userProvider, stepProvider) {
+            stepProvider ??= StepTrackerProvider();
+            stepProvider.attachToUser(userProvider.user?.id ?? userProvider.userId);
+            return stepProvider;
+          },
+        ),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {

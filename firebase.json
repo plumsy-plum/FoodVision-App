@@ -1,1 +1,44 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"food-vision-5c7cc","appId":"1:1087540045572:android:5310068cd9a97d995b1251","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"food-vision-5c7cc","appId":"1:1087540045572:ios:b6b9a05385756a405b1251","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"food-vision-5c7cc","configurations":{"android":"1:1087540045572:android:5310068cd9a97d995b1251","ios":"1:1087540045572:ios:b6b9a05385756a405b1251"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "food-vision-5c7cc",
+          "appId": "1:1087540045572:android:5310068cd9a97d995b1251",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "food-vision-5c7cc",
+          "appId": "1:1087540045572:ios:b6b9a05385756a405b1251",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "food-vision-5c7cc",
+          "configurations": {
+            "android": "1:1087540045572:android:5310068cd9a97d995b1251",
+            "ios": "1:1087540045572:ios:b6b9a05385756a405b1251"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

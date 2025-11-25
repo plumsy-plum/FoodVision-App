@@ -45,5 +45,7 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSMotionUsageDescription</key>
+	<string>FoodVision needs access to Motion &amp; Fitness data to track your daily steps.</string>
 </dict>
 </plist>

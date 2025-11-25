@@ -41,11 +41,12 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
       child: Scaffold(
         backgroundColor: isDarkMode ? Colors.black : Color.fromARGB(255, 218, 218, 218),
         appBar: buildAppBarWithGradient(isDarkMode, accentColor, user, screenWidth),
-        body: Column(
-          children: [
-            buildSearchBar(isDarkMode, accentColor, screenWidth, screenHeight),
-            Expanded(
-              child: StreamBuilder<QuerySnapshot>(
+        body: SingleChildScrollView(
+          padding: EdgeInsets.only(bottom: screenHeight * 0.02),
+          child: Column(
+            children: [
+              buildSearchBar(isDarkMode, accentColor, screenWidth, screenHeight),
+              StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance.collection('Food').snapshots(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
@@ -61,6 +62,8 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
                         .toList();
 
                     return ListView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
                       padding: EdgeInsets.symmetric(
                         vertical: screenHeight * 0.02,
                         horizontal: screenWidth * 0.05,
@@ -82,8 +85,8 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
                   }
                 },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -321,6 +324,8 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
 
   Widget buildShimmerGrid(double screenWidth) {
     return ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.all(screenWidth * 0.05),
       itemCount: 6,
       itemBuilder: (context, index) {

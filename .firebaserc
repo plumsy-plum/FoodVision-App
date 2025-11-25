@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "fd": "foodvision-web",
+    "default": "foodvision-web"
+  },
+  "targets": {},
+  "etags": {}
+}

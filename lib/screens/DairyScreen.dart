@@ -6,6 +6,7 @@ import '../sevices/FoodProvider.dart';
 import '../sevices/ThameProvider.dart';
 import '../sevices/UserProvider.dart';
 import '../sevices/WaterProvider.dart';
+import '../widgets/step_tracker_card.dart';
 import 'AddFoodDialog.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -443,6 +444,12 @@ class _DiaryScreenState extends State<DiaryScreen> {
                       ),
                     ),
                   ],
+                ),
+                SizedBox(height: 20),
+                StepTrackerCard(
+                  showWeeklyChart: true,
+                  enableCelebrations: false,
+                  compact: false,
                 ),
                 SizedBox(height: 20),
                 // Water Intake Progress Bar
