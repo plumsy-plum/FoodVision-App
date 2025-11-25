@@ -84,6 +84,7 @@ flutter run -d chrome</code></pre>
   <hr/>
 
   <h2>🌐 Live Hosting</h2>
+  <p>https://foodvision-web.web.app<p>
   <p>This app is live and can be used on any phone or browser.</p>
 
   <hr/>
